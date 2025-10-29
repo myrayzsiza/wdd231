@@ -1,53 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Rayz" />
-  <meta name="description" content="Chamber of Commerce homepage for WDD231 project. Promoting local business and community engagement." />
-  <title>Chamber of Commerce</title>
-  <link rel="stylesheet" href="css/large.css" />
-  <link rel="stylesheet" href="css/small.css" media="screen and (max-width: 640px)" />
-  <script src="js/navigation.js" defer></script>
-  <script src="js/date.js" defer></script>
-  <script src="js/course.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta name="description" content="Rayz WDD 231 Course Home Page, featuring course links, assignments, and programming certificate details." />
+  <title>Rayz - WDD 231 Course Home Page</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+    <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/course.js" defer></script>
 </head>
 <body>
-  <header>
-    <img src="images/logo.svg" alt="Logo" />
-    <span>Rayz</span>
-    <button id="hamburger">☰</button>
-  </header>
+  
+  <header id="siteHeader">
+    <div id="logo-area">
+      <img src="images/logo.svg" alt="WDD 231 Site Logo">
+      <span id="site-title">Site Name</span>
+    </div>
+    <button id="hamburger" aria-expanded="false" aria-controls="navMenu">☰</button>
+  </header>
 
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="chamber.html">Chamber</a>
-    <a href="final.html">Final</a>
-  </nav>
+  <nav id="navMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="chamber/index.html">Chamber Project</a>
+    <a href="final/index.html">Final Project</a>
+    <a href="project/siteplan.html">Site Plan</a>
+  </nav>
 
-  <main>
-    <h1>Home</h1>
-    <section><h2>Welcome</h2></section>
-    <section><h2>Spotlight</h2></section>
-    <section><h2>Events</h2></section>
+  <main>
+    <h1>Home</h1>
 
-    <div>
-      <button onclick="renderCourses('All')">All</button>
-      <button onclick="renderCourses('WDD')">WDD</button>
-      <button onclick="renderCourses('CSE')">CSE</button>
-    </div>
+    <section class="profile-section">
+      <h2>About Me</h2>
+      <div class="profile-content"> 
+        <div class="bio-text">
+          <p>Hello! I'm Raymond Bamutesiza, an aspiring web developer based in Jinja, Uganda. I enjoy building responsive and accessible websites using modern standards. This page demonstrates my foundational skills in HTML, CSS, and JavaScript for the WDD 231 course.</p>
+          <p>My current focus is mastering client-side scripting and effective responsive design techniques.</p>
+        </div>
+        <div class="photo-container">
+          <img src="images/profile.webp" alt="Your Profile Picture" loading="lazy" />
+        </div>
+      </div>
+    </section>
 
-    <div id="courseList"></div>
-    <div id="creditTotal"></div>
-  </main>
+    <section class="course-section">
+      <h2>Web Certificate Courses</h2>
+      
+      <div class="filter-buttons">
+        <button id="filter-all" class="active-filter">All</button>
+        <button id="filter-cse">CSE</button>
+        <button id="filter-wdd">WDD</button>
+      </div>
 
-  <footer>
-    <div id="socials">
-      <a href="https://github.com/myrayzsiza">GitHub</a>
-      <a href="https://www.linkedin.com/m/in/raymond-bamutesiza-127136357">LinkedIn</a>
-    </div>
-    <p>&copy; <span id="year"></span></p>
-    <p>Last Modified: <span id="lastModified"></span></p>
-  </footer>
+      <p class="credit-summary">
+        Total Credits Displayed: <span id="total-credits">0</span>
+      </p>
+      
+      <div id="course-cards" class="card-grid">
+      </div>
+    </section>
+
+    <section class="assignment-section">
+      <h2>WDD 231 Learning Activities</h2>
+      <ul>
+        <li><a href="#" target="_blank">Week 1: HTML Structure</a></li>
+        <li><a href="#" target="_blank">Week 2: Responsive Design</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div id="socials">
+      <a href="https://github.com/myrayzsiza" target="_blank" aria-label="GitHub"><img src="images/github-icon.svg" alt="GitHub Logo"></a>
+      <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn Logo"></a>
+      <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Twitter Logo"></a>
+      <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook-icon.svg" alt="Facebook Logo"></a>
+    </div>
+    
+    <p>&copy; <span id="currentyear"></span> | Raymond Bamutesiza | Uganda</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>
