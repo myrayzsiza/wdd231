@@ -1,0 +1,14 @@
+#navMenu {
+  display: none;
+  flex-direction: column;
+}
+
+#navMenu.open {
+  display: flex;
+}
+
+#hamburger {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}

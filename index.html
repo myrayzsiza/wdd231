@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Rayz" />
+  <meta name="description" content="Chamber of Commerce homepage for WDD231 project. Promoting local business and community engagement." />
+  <title>Chamber of Commerce</title>
+  <link rel="stylesheet" href="css/large.css" />
+  <link rel="stylesheet" href="css/small.css" media="screen and (max-width: 640px)" />
+  <script src="js/navigation.js" defer></script>
+  <script src="js/date.js" defer></script>
+  <script src="js/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.svg" alt="Logo" />
+    <span>Rayz</span>
+    <button id="hamburger">☰</button>
+  </header>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="chamber.html">Chamber</a>
+    <a href="final.html">Final</a>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+    <section><h2>Welcome</h2></section>
+    <section><h2>Spotlight</h2></section>
+    <section><h2>Events</h2></section>
+
+    <div>
+      <button onclick="renderCourses('All')">All</button>
+      <button onclick="renderCourses('WDD')">WDD</button>
+      <button onclick="renderCourses('CSE')">CSE</button>
+    </div>
+
+    <div id="courseList"></div>
+    <div id="creditTotal"></div>
+  </main>
+
+  <footer>
+    <div id="socials">
+      <a href="https://github.com/myrayzsiza">GitHub</a>
+      <a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+    </div>
+    <p>&copy; <span id="year"></span></p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
