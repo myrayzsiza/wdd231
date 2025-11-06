@@ -4,7 +4,7 @@
     "address": "123 Innovation Drive",
     "phone": "0700123456",
     "website": "https://technova.com",
-    "image": "technova.png",
+    "image": "technova-solutions.png",
     "membershipLevel": 3
   },
   {
@@ -12,7 +12,7 @@
     "address": "456 Eco Street",
     "phone": "0700654321",
     "website": "https://greenleaf.org",
-    "image": "greenleaf.png",
+    "image": "greenleaf-organics.png",
     "membershipLevel": 2
   },
   {
@@ -20,7 +20,7 @@
     "address": "789 Construction Ave",
     "phone": "0700987654",
     "website": "https://citybuilders.com",
-    "image": "citybuilders.png",
+    "image": "city-builders.png",
     "membershipLevel": 1
   },
   {
@@ -28,7 +28,7 @@
     "address": "321 Silicon Lane",
     "phone": "0700112233",
     "website": "https://brightfuture.tech",
-    "image": "brightfuture.png",
+    "image": "brightfuture-tech.png",
     "membershipLevel": 3
   },
   {
@@ -36,7 +36,7 @@
     "address": "654 Wellness Road",
     "phone": "0700445566",
     "website": "https://healthyliving.com",
-    "image": "healthyliving.png",
+    "image": "healthy-living.png",
     "membershipLevel": 2
   },
   {
@@ -44,7 +44,7 @@
     "address": "987 Greenway Blvd",
     "phone": "0700778899",
     "website": "https://ecotransport.com",
-    "image": "ecotransport.png",
+    "image": "eco-transport.png",
     "membershipLevel": 1
   },
   {
@@ -52,7 +52,7 @@
     "address": "147 Creative Street",
     "phone": "0700332211",
     "website": "https://visionarydesigns.com",
-    "image": "visionarydesigns.png",
+    "image": "visionary-designs.png",
     "membershipLevel": 2
   }
 ]

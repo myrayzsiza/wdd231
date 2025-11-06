@@ -19,6 +19,9 @@ body {
     background-color: var(--background-color);
     color: #212529;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 #siteHeader {
@@ -78,37 +81,10 @@ body {
 }
 
 main {
+    flex: 1;
     max-width: 100%; 
     margin: 0; 
     padding: 1rem; 
-}
-
-h2 {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 0.5rem 1rem;
-    margin: -1rem -1rem 1rem -1rem;
-}
-
-section {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background-color: white; 
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.profile-section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.profile-section img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 4px;
 }
 
 .filter-buttons {
@@ -130,33 +106,66 @@ section {
     cursor: pointer;
 }
 
-#course-cards {
+#membersContainer {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+    padding: 1rem;
 }
 
-.course-card {
-    background-color: #e6f0ff;
-    border-left: 5px solid var(--primary-color);
+#membersContainer.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-card {
+    border: 1px solid #ccc;
     padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#membersContainer.list .member-card {
+    flex-direction: row;
+    align-items: center;
+}
+
+.member-card img {
+    max-width: 100%;
     border-radius: 4px;
 }
 
-.course-card.completed {
-    background-color: var(--completed-bg);
-    border-left-color: var(--completed-border);
+#membersContainer.list .member-card img {
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.member-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+.member-card p {
+    margin-bottom: 0.25rem;
+}
+
+.member-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--primary-color);
+    background-color: #004466;
     color: white;
-    padding: 1rem;
-    font-size: 0.9rem;
     text-align: center;
+    padding: 1rem;
 }
 
 #socials {
@@ -169,9 +178,7 @@ footer {
     height: 30px; 
 }
 
-/* Large screen adjustments */
 @media (min-width: 768px) {
-
     main {
         max-width: 1200px;
         margin: 2rem auto;
@@ -182,10 +189,6 @@ footer {
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 2rem;
-    }
-
-    #siteHeader {
-        display: flex; /* keep header visible */
     }
 
     #navMenu {
@@ -207,46 +210,6 @@ footer {
         grid-column: 1 / span 2;
     }
 
-    .course-section, .assignment-section, .profile-section {
-        grid-column: 1 / span 2;
-    }
-
-    .profile-section h2 {
-        margin-bottom: 0;
-    }
-
-    .profile-content {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 2rem;
-        align-items: start;
-        margin-top: 1rem;
-    }
-
-    .profile-section .bio-text {
-        grid-column: 1 / 2;
-    }
-
-    .photo-container::before {
-        content: "Student Photo";
-        display: block;
-        background-color: var(--primary-color);
-        color: white;
-        padding: 0.5rem 1rem;
-        margin: -1rem 0 1rem 0;
-    }
-
-    .profile-section .photo-container {
-        grid-column: 2 / 3;
-        align-self: start;
-        padding: 1rem;
-        background-color: #f8f8f8;
-    }
-
-    #course-cards {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-    }
-
     footer {
         flex-direction: row;
         justify-content: space-around;
@@ -255,85 +218,8 @@ footer {
 }
 
 nav button {
-  display: inline-block;
-  width: auto;
-  margin: 0.5rem;
-  padding: 0.5rem 1rem;
-}
-
-#membersContainer.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-.member-card {
-  border: 1px solid #ccc;
-  padding: 1rem;
-  background-color: #f9f9f9;
-}
-
-/* Directory Page Styles - Large / Desktop */
-#membersContainer.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1rem;
-}
-
-.member-card {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.member-card img {
-    max-width: 100%;
-    border-radius: 4px;
-}
-
-.member-card h3 {
-    margin-bottom: 0.25rem;
-}
-
-.member-card p {
-    margin-bottom: 0.25rem;
-}
-
-.member-card a {
-    color: var(--primary-color);
-    text-decoration: none;
-}
-
-.member-card a:hover {
-    text-decoration: underline;
-}
-
-/* Navigation adjustment for larger screens */
-nav {
-    justify-content: flex-start;
-}
-
-nav button {
-    margin: 0 0.5rem;
-}
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
-footer {
-  background-color: #004466;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+    display: inline-block;
+    width: auto;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
 }
