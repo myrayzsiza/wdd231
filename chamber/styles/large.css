@@ -253,3 +253,87 @@ footer {
         font-size: 1rem;
     }
 }
+
+nav button {
+  display: inline-block;
+  width: auto;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+#membersContainer.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.member-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+/* Directory Page Styles - Large / Desktop */
+#membersContainer.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.member-card {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.member-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.member-card h3 {
+    margin-bottom: 0.25rem;
+}
+
+.member-card p {
+    margin-bottom: 0.25rem;
+}
+
+.member-card a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.member-card a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation adjustment for larger screens */
+nav {
+    justify-content: flex-start;
+}
+
+nav button {
+    margin: 0 0.5rem;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
