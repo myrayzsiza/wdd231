@@ -1,15 +1,15 @@
 async function loadSpotlights() {
   const container = document.getElementById("spotlight-container");
-  container.innerHTML = ''; // clear previous content
+  container.innerHTML = ''; 
 
   try {
     const resp = await fetch("data/members.json");
     if (!resp.ok) throw new Error(`Network error: ${resp.status}`);
     const members = await resp.json();
 
-    // Normalize member objects to a consistent shape:
+    
     const normalized = members.map(m => {
-      // membership can be number (membershipLevel) or string ('Gold','Silver','Member')
+      
       let membershipText = '';
       if (typeof m.membershipLevel === 'number') {
         if (m.membershipLevel === 3) membershipText = 'Gold';
@@ -21,7 +21,7 @@ async function loadSpotlights() {
         membershipText = (m.membershipLevel || m.membership) ? String(m.membershipLevel || m.membership) : 'Member';
       }
 
-      // image field might be named `image` or `logo`
+      
       const imageFile = m.image || m.logo || '';
 
       return {
@@ -70,7 +70,7 @@ async function loadSpotlights() {
     console.error('Spotlight error:', err);
     container.innerHTML = `<p>Failed to load spotlights.</p>`;
   } finally {
-    // set footer dynamic content here (runs after spotlights load)
+    
     const yearEl = document.getElementById('currentyear');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
     const lm = document.getElementById('lastModified');

@@ -1,14 +1,14 @@
-// CONFIG: replace with your OpenWeatherMap API key and desired city (city name or "City,CountryCode")
-const apiKey = "YOUR_API_KEY_HERE"; // <-- PUT YOUR KEY HERE
-const city = "Jinja,UG"; // change if needed
-const units = "metric"; // "metric" for Celsius or "imperial" for Fahrenheit
+
+const apiKey = "bbfd05d26145b41f2efaa37a9faffebc";
+const city = "Jinja,UG"; 
+const units = "metric"; 
 
 async function getWeather() {
   const currentEl = document.getElementById('current-temp');
   const descEl = document.getElementById('current-desc');
   const forecastEl = document.getElementById('forecast');
 
-  if (!apiKey || apiKey === "YOUR_API_KEY_HERE") {
+  if (!apiKey || apiKey === "bbfd05d26145b41f2efaa37a9faffebc") {
     currentEl.textContent = 'Weather API key not configured.';
     descEl.textContent = 'Please add your OpenWeatherMap API key in scripts/weather.js';
     forecastEl.innerHTML = '';
