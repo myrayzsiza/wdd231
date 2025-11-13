@@ -1,90 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Raymond Bamutesiza">
-  <meta name="description" content="Rayz WDD 231 Course Home Page, featuring course links, assignments, and programming certificate details.">
-  <title>Raymond - WDD 231 Course Home Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber of Commerce Member Directory | Home</title>
+  <meta name="description" content="Welcome to the Chamber of Commerce home page — find upcoming events, local weather, member spotlights, and how to join the chamber." />
+  <meta name="author" content="Raymond Bamutesiza" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta property="og:title" content="Chamber of Commerce — Home & Member Spotlights" />
+  <meta property="og:description" content="Discover local businesses, upcoming chamber events, and featured member spotlights. Join the chamber to connect with community organizations and services." />
+  <meta property="og:image" content="https://myrayzsiza.github.io/wdd231/chamber/images/og-image.png" />
+  <meta property="og:url" content="https://myrayzsiza.github.io/wdd231/chamber/index.html" />
+  <link rel="icon" href="images/favicon.ico" />
 
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
 
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/course.js" defer></script>
+  <link rel="stylesheet" href="styles/small.css" />
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)" />
 </head>
 <body>
   <header id="siteHeader">
     <div id="logo-area">
-      <img src="images/logo.svg" alt="WDD 231 Site Logo">
+      <a href="index.html"><img src="images/logo.svg" alt="Site Logo"></a>
       <span id="site-title">Chamber of Commerce</span>
     </div>
     <button id="hamburger" aria-expanded="false" aria-controls="navMenu">☰</button>
   </header>
 
-  <nav id="navMenu">
+  <nav id="navMenu" aria-label="Main navigation">
     <a href="index.html" class="active">Home</a>
-    <a href="directory.html">Chamber Project</a>
-    <a href="final/index.html">Final Project</a>
-    <a href="project/siteplan.html">Site Plan</a>
+    <a href="directory.html">Directory</a>
+    <a href="join.html">Join</a>
   </nav>
 
   <main>
-    <h1>Home</h1>
+    <h1>Welcome to the Chamber</h1>
 
-    <section class="profile-section">
-      <h2>About Me</h2>
-      <div class="profile-content">
-        <div class="bio-text">
-          <p>Hello! I'm Raymond Bamutesiza, an aspiring web developer based in Jinja, Uganda. I enjoy building responsive and accessible websites using modern standards. This page demonstrates my foundational skills in HTML, CSS, and JavaScript for the WDD 231 course.</p>
-          <p>My current focus is mastering client-side scripting and effective responsive design techniques.</p>
-        </div>
-        <div class="photo-container">
-          <img src="images/profile.webp" alt="Your Profile Picture" loading="lazy">
-        </div>
+    <section class="hero" aria-label="Hero">
+      <img src="images/hero.jpg" alt="Community members at an event" />
+      <div class="cta">
+        <a href="join.html" class="btn">Join the Chamber</a>
       </div>
     </section>
 
-    <section class="course-section">
-      <h2>Web Certificate Courses</h2>
-
-      <div class="filter-buttons">
-        <button id="filter-all" class="active-filter">All</button>
-        <button id="filter-cse">CSE</button>
-        <button id="filter-wdd">WDD</button>
-      </div>
-
-      <p class="credit-summary">
-        Total Credits Displayed: <span id="total-credits">0</span>
-      </p>
-
-      <div id="course-cards" class="card-grid"></div>
-    </section>
-
-    <section class="assignment-section">
-      <h2>WDD 231 Learning Activities</h2>
+    <section class="events" aria-labelledby="events-heading">
+      <h2 id="events-heading">Upcoming Events</h2>
       <ul>
-        <li><a href="#" target="_blank">Week 1: HTML Structure</a></li>
-        <li><a href="#" target="_blank">Week 2: Responsive Design</a></li>
+        <li>Business Networking Night – Nov 20</li>
+        <li>Holiday Market – Dec 5</li>
       </ul>
+    </section>
+
+    <section class="weather" aria-labelledby="weather-heading">
+      <h2 id="weather-heading">Local Weather</h2>
+      <p id="current-temp">Temp: —</p>
+      <p id="current-desc">Description: —</p>
+      <div id="forecast" aria-live="polite"></div>
+    </section>
+
+    <section class="spotlights" aria-labelledby="spotlights-heading">
+      <h2 id="spotlights-heading">Member Spotlights</h2>
+      <div id="spotlight-container" class="spotlight-grid" role="list"></div>
     </section>
   </main>
 
   <footer>
     <div id="socials">
-      <a href="https://github.com/myrayzsiza" target="_blank" aria-label="GitHub"><img src="images/github-icon.svg" alt="GitHub Logo"></a>
-      <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn Logo"></a>
-      <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Twitter Logo"></a>
-      <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook-icon.svg" alt="Facebook Logo"></a>
+      <a href="https://github.com/myrayzsiza" target="_blank" aria-label="GitHub">
+        <img src="images/github-icon.svg" alt="GitHub Logo" />
+      </a>
+      <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357/" target="_blank" aria-label="LinkedIn">
+        <img src="images/linkedin-icon.svg" alt="LinkedIn Logo" />
+      </a>
+      <a href="#" target="_blank" aria-label="Twitter">
+        <img src="images/twitter-icon.svg" alt="Twitter Logo" />
+      </a>
+      <a href="#" target="_blank" aria-label="Facebook">
+        <img src="images/facebook-icon.svg" alt="Facebook Logo" />
+      </a>
     </div>
 
-    <p>&copy; <span id="currentyear"></span> | Raymond Bamutesiza | Uganda</p>
+    <p>&copy; <span id="currentyear"></span> Raymond Bamutesiza | Uganda</p>
     <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
+
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/spotlight.js"></script>
 </body>
 </html>

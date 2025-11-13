@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta name="description" content="Rayz WDD 231 Course Home Page, featuring course links, assignments, and programming certificate details.">
+  <title>Raymond - WDD 231 Course Home Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header id="siteHeader">
+    <div id="logo-area">
+      <img src="images/logo.svg" alt="WDD 231 Site Logo">
+      <span id="site-title">Chamber of Commerce</span>
+    </div>
+    <button id="hamburger" aria-expanded="false" aria-controls="navMenu">☰</button>
+  </header>
+
+  <nav id="navMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="directory.html">Chamber Project</a>
+    <a href="final/index.html">Final Project</a>
+    <a href="project/siteplan.html">Site Plan</a>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+
+    <section class="profile-section">
+      <h2>About Me</h2>
+      <div class="profile-content">
+        <div class="bio-text">
+          <p>Hello! I'm Raymond Bamutesiza, an aspiring web developer based in Jinja, Uganda. I enjoy building responsive and accessible websites using modern standards. This page demonstrates my foundational skills in HTML, CSS, and JavaScript for the WDD 231 course.</p>
+          <p>My current focus is mastering client-side scripting and effective responsive design techniques.</p>
+        </div>
+        <div class="photo-container">
+          <img src="images/profile.webp" alt="Your Profile Picture" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="course-section">
+      <h2>Web Certificate Courses</h2>
+
+      <div class="filter-buttons">
+        <button id="filter-all" class="active-filter">All</button>
+        <button id="filter-cse">CSE</button>
+        <button id="filter-wdd">WDD</button>
+      </div>
+
+      <p class="credit-summary">
+        Total Credits Displayed: <span id="total-credits">0</span>
+      </p>
+
+      <div id="course-cards" class="card-grid"></div>
+    </section>
+
+    <section class="assignment-section">
+      <h2>WDD 231 Learning Activities</h2>
+      <ul>
+        <li><a href="#" target="_blank">Week 1: HTML Structure</a></li>
+        <li><a href="#" target="_blank">Week 2: Responsive Design</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div id="socials">
+      <a href="https://github.com/myrayzsiza" target="_blank" aria-label="GitHub"><img src="images/github-icon.svg" alt="GitHub Logo"></a>
+      <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn Logo"></a>
+      <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Twitter Logo"></a>
+      <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook-icon.svg" alt="Facebook Logo"></a>
+    </div>
+
+    <p>&copy; <span id="currentyear"></span> | Raymond Bamutesiza | Uganda</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>
