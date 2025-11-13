@@ -3,58 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chamber of Commerce | Home</title>
+  <title>My Chamber of Commerce | Welcome</title>
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Welcome to the Chamber of Commerce. Discover events, member spotlights, weather updates, and ways to join our community.">
+  <meta name="author" content="Raymond Bamutesiza">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="My Chamber of Commerce | Welcome">
+  <meta property="og:description" content="Join the Chamber of Commerce and explore our members, events, and local updates.">
+  <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:url" content="https://username.github.io/wdd231/chamber/index.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
 </head>
 <body>
   <header id="siteHeader">
-    <h1>My Chamber of Commerce</h1>
+    <div id="logo-area">
+      <img src="images/logo.png" alt="Chamber Logo">
+      <span id="site-title">My Chamber of Commerce</span>
+    </div>
     <nav>
       <ul id="navMenu">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
       </ul>
+      <button id="hamburger">&#9776;</button>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="images/hero.jpg" alt="Community Hero Image">
-    <div class="cta">
-      <a href="join.html" class="btn">Join the Chamber</a>
-    </div>
-  </section>
+  <main>
+    <h1>Welcome to the Chamber of Commerce</h1>
 
-  <!-- Current Events -->
-  <section class="events">
-    <h2>Upcoming Events</h2>
-    <ul>
-      <li>Business Networking Night – Nov 20</li>
-      <li>Holiday Market – Dec 5</li>
-    </ul>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Community Hero Image">
+      <div class="cta">
+        <a href="join.html" class="btn">Join the Chamber</a>
+      </div>
+    </section>
 
-  <!-- Weather -->
-  <section class="weather">
-    <h2>Local Weather</h2>
-    <p id="current-temp"></p>
-    <p id="current-desc"></p>
-    <div id="forecast"></div>
-  </section>
+    <!-- Current Events -->
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>Business Networking Night – Nov 20</li>
+        <li>Holiday Market – Dec 5</li>
+      </ul>
+    </section>
 
-  <!-- Company Spotlights -->
-  <section class="spotlights">
-    <h2>Member Spotlights</h2>
-    <div id="spotlight-container"></div>
-  </section>
+    <!-- Weather -->
+    <section class="weather">
+      <h2>Local Weather</h2>
+      <p id="current-temp"></p>
+      <p id="current-desc"></p>
+      <div id="forecast"></div>
+    </section>
+
+    <!-- Company Spotlights -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Raymond Bamutesiza</p>
-  </footer>
+  <div id="socials">
+    <img src="images/facebook-icon.svg" alt="Facebook">
+    <img src="images/twitter-icon.svg" alt="Twitter">
+    <img src="images/linkedin-icon.svg" alt="LinkedIn">
+    <img src="images/github-icon.svg" alt="GitHub">
+  </div>
+  <p>&copy; <span id="currentyear"></span> Raymond Bamutesiza</p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
 
-  <script src="scripts/weather.js"></script>
-  <script src="scripts/spotlight.js"></script>
+  <!-- JS -->
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
 </body>
 </html>

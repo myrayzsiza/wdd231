@@ -25,13 +25,13 @@ function displayMembers(members) {
         <p>${member.address}</p>
         <p>${member.phone}</p>
         <a href="${member.website}" target="_blank">Visit Website</a>
+        <p>Membership Level: ${member.membershipLevel}</p>
       </div>
     `;
     container.appendChild(card);
   });
 }
 
-// Grid/List toggle
 gridBtn.addEventListener('click', () => {
   container.classList.add('grid');
   container.classList.remove('list');
@@ -47,7 +47,10 @@ listBtn.addEventListener('click', () => {
 });
 
 // Footer dynamic content
-document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+const currentYearEl = document.getElementById('currentyear');
+const lastModifiedEl = document.getElementById('lastModified');
+
+if (currentYearEl) currentYearEl.textContent = new Date().getFullYear();
+if (lastModifiedEl) lastModifiedEl.textContent = document.lastModified;
 
 loadMembers();

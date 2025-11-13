@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
 </head>
 <body>
-  <header id="siteHeader">
+  <header>
     <h1>My Chamber of Commerce</h1>
     <nav>
-      <ul id="navMenu">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="directory.html" class="active">Directory</a></li>
         <li><a href="join.html">Join</a></li>
@@ -20,19 +20,25 @@
   </header>
 
   <main>
-    <section class="filter-buttons">
-      <button onclick="showAll()">All Members</button>
-      <button onclick="showGoldSilver()">Gold & Silver</button>
-    </section>
+    <div class="filter-buttons">
+      <button id="gridBtn" class="active-filter">Grid View</button>
+      <button id="listBtn">List View</button>
+    </div>
 
-    <section id="membersContainer" class="grid">
-      <!-- Directory member cards inserted here -->
-    </section>
+    <div id="membersContainer" class="grid"></div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Raymond Bamutesiza</p>
-  </footer>
+  <div id="socials">
+    <img src="images/facebook-icon.svg" alt="Facebook">
+    <img src="images/twitter-icon.svg" alt="Twitter">
+    <img src="images/linkedin-icon.svg" alt="LinkedIn">
+    <img src="images/github-icon.svg" alt="GitHub">
+  </div>
+  <p>&copy; <span id="currentyear"></span> Raymond Bamutesiza</p>
+  <p>Last Modified: <span id="lastModified"></span></p>
+</footer>
+
 
   <script src="scripts/directory.js"></script>
 </body>
