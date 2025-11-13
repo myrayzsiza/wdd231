@@ -3,65 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the Chamber of Commerce Member Directory to find local businesses, services, and contacts in your community.">
-  <meta name="author" content="Raymond Bamutesiza">
-  <meta property="og:title" content="Explore the Chamber of Commerce Member Directory">
-  <meta property="og:description" content="Browse the Chamber of Commerce Member Directory to discover local businesses, services, and contacts in your community.">
-  <meta property="og:image" content="https://myrayzsiza.github.io/wdd231/chamber/images/og-image.png">
-  <meta property="og:url" content="https://myrayzsiza.github.io/wdd231/chamber/directory.html">
-  <link rel="icon" href="images/favicon.ico">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <title>Chamber of Commerce | Directory</title>
   <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
-
-  <title>Chamber of Commerce Member Directory</title>
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
 </head>
 <body>
   <header id="siteHeader">
-    <div id="logo-area">
-      <img src="images/logo.svg" alt="Site Logo">
-      <span id="site-title">Chamber of Commerce</span>
-    </div>
-    <button id="hamburger" aria-expanded="false" aria-controls="navMenu">☰</button>
+    <h1>My Chamber of Commerce</h1>
+    <nav>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html" class="active">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav id="navMenu">
-    <a href="index.html">Home</a>
-    <a href="directory.html" class="active">Chamber Directory</a>
-    <a href="final/index.html">Final Project</a>
-    <a href="project/siteplan.html">Site Plan</a>
-  </nav>
-
   <main>
-    <h1>Chamber Directory</h1>
-    <div class="filter-buttons">
-      <button id="gridBtn" class="active-filter">Grid View</button>
-      <button id="listBtn">List View</button>
-    </div>
-    <section id="membersContainer" class="grid"></section>
+    <section class="filter-buttons">
+      <button onclick="showAll()">All Members</button>
+      <button onclick="showGoldSilver()">Gold & Silver</button>
+    </section>
+
+    <section id="membersContainer" class="grid">
+      <!-- Directory member cards inserted here -->
+    </section>
   </main>
 
   <footer>
-    <div id="socials">
-      <a href="https://github.com/myrayzsiza" target="_blank" aria-label="GitHub"><img src="images/github-icon.svg" alt="GitHub Logo"></a>
-      <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357/" target="_blank" aria-label="LinkedIn"><img src="images/linkedin-icon.svg" alt="LinkedIn Logo"></a>
-      <a href="#" target="_blank" aria-label="Twitter"><img src="images/twitter-icon.svg" alt="Twitter Logo"></a>
-      <a href="#" target="_blank" aria-label="Facebook"><img src="images/facebook-icon.svg" alt="Facebook Logo"></a>
-    </div>
-
-    <p>&copy; <span id="currentyear"></span> | Raymond Bamutesiza | Uganda</p>
-    <p>Last Modified: <span id="lastModified"></span></p>
+    <p>&copy; 2025 Raymond Bamutesiza</p>
   </footer>
 
-  <!-- JS -->
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/directory.js" defer></script>
-  
+  <script src="scripts/directory.js"></script>
 </body>
 </html>
