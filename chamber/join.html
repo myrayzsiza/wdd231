@@ -1,146 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Our Chamber – Jinja Chamber of Commerce</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Raymond Chamber of Commerce</title>
+    
+    <meta name="description" content="Sign up to join the Raymond Chamber of Commerce and connect with local businesses.">
+    <meta name="author" content="Raymond">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
-  <meta name="description" content="Join the Jinja Chamber of Commerce to grow your business, connect with local leaders, and access exclusive member resources that support your success.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Join the Raymond Chamber of Commerce">
+    <meta property="og:description" content="Sign up to join the Raymond Chamber of Commerce and connect with local businesses.">
+    <meta property="og:image" content="https://example.com/images/og-image.jpg">
+    <meta property="og:url" content="https://example.com/join.html">
 
-  <meta name="author" content="Raymond Bamutesiza">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="icon" href="images/favicon.ico">
-
-  <meta property="og:title" content="Join the Jinja Chamber of Commerce – Become a Member Today">
-  <meta property="og:description" content="Become a member of the Jinja Chamber of Commerce and unlock networking opportunities, business support, and community growth programs that help your business thrive.">
-  <meta property="og:image" content="https://myrraysiza.github.io/wdd231/chamber/images/hero.webp">
-  <meta property="og:url" content="https://myrraysiza.github.io/wdd231/chamber/join.html">
-  <meta property="og:type" content="website">
-
-  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)">
-  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
 </head>
 <body>
-  <header>
-    <h1>Chamber of Commerce</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section class="membership-form">
-      <h2>Membership Application</h2>
-      <form action="thankyou.html" method="get">
-
-        <label for="fname" title="First Name">First Name:
-          <input type="text" id="fname" name="fname" required autocomplete="given-name">
-        </label>
-
-        <label for="lname" title="Last Name">Last Name:
-          <input type="text" id="lname" name="lname" required autocomplete="family-name">
-        </label>
-
-        <label for="title" title="Organizational Title">Organizational Title:
-          <input type="text" id="title" name="title" autocomplete="organization-title"
-                 pattern="[A-Za-z\\-\\s]{7,}" title="Minimum 7 letters, hyphens, or spaces">
-        </label>
-
-        <label for="email" title="Email">Email:
-          <input type="email" id="email" name="email" placeholder="example@email.com"
-                 required autocomplete="email">
-        </label>
-
-        <label for="phone" title="Mobile Phone">Mobile Phone:
-          <input type="tel" id="phone" name="phone" required autocomplete="tel">
-        </label>
-
-        <label for="business" title="Business/Organization">Business/Organization:
-          <input type="text" id="business" name="business" required autocomplete="organization">
-        </label>
-
-        <label for="membership" title="Membership Level">Membership Level:
-          <select id="membership" name="membership" required>
-            <option value="">Select Membership Level</option>
-            <option value="np">Non-Profit</option>
-            <option value="bronze">Bronze</option>
-            <option value="silver">Silver</option>
-            <option value="gold">Gold</option>
-          </select>
-
-        </label>
-
-        <label for="description" title="Business Description">Business Description:
-          <textarea id="description" name="description"></textarea>
-        </label>
-
-        <input type="hidden" id="timestamp" name="timestamp" value="">
-
-        <button type="submit">Submit Application</button>
-      </form>
-    </section>
-
-    <section class="cards">
-
-      <div class="card">
-        <h3>Non-Profit Membership</h3>
-        <button onclick="openModal('npModal')">View Benefits</button>
-      </div>
-      <div id="npModal" class="modal" style="display:none;">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('npModal')">&times;</span>
-          <h2>Non-Profit Benefits</h2>
-          <p>No fee, community support, event participation.</p>
+    <header>
+        <div id="logo-area">
+            <img src="images/logo.png" alt="Raymond Chamber of Commerce Logo">
         </div>
-      </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      <div class="card">
-        <h3>Bronze Membership</h3>
-        <button onclick="openModal('bronzeModal')">View Benefits</button>
-      </div>
-      <div id="bronzeModal" class="modal" style="display:none;">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
-          <h2>Bronze Benefits</h2>
-          <p>Basic advertising, event discounts, networking opportunities.</p>
+    <main>
+        <section class="hero">
+            <img src="images/chamber-hero.jpg" alt="Chamber of Commerce event">
+            <div class="cta">
+                <a href="#membership-form" class="btn">Join Now</a>
+            </div>
+        </section>
+
+        <section id="membership-form" class="membership-form">
+            <h1>Chamber of Commerce Membership Form</h1>
+            <form method="get" action="thankyou.html">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" title="Enter your first name" required>
+
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" title="Enter your last name" required>
+
+                <label for="orgTitle">Organization Title</label>
+                <input type="text" id="orgTitle" name="orgTitle" title="Enter your job title" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" title="Enter your email address" required>
+
+                <label for="mobile">Mobile Phone</label>
+                <input type="tel" id="mobile" name="mobile" title="Enter your mobile phone number" required>
+
+                <label for="orgName">Organization Name</label>
+                <input type="text" id="orgName" name="orgName" title="Enter your organization's name" required>
+
+                <label for="membershipLevel">Membership Level</label>
+                <select id="membershipLevel" name="membershipLevel" title="Select membership level" required>
+                    <option value="">Select Level</option>
+                    <option value="basic">Basic</option>
+                    <option value="premium">Premium</option>
+                    <option value="corporate">Corporate</option>
+                </select>
+
+                <label for="orgDesc">Organization Description</label>
+                <textarea id="orgDesc" name="orgDesc" title="Describe your organization" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Raymond Bamutesiza Chamber of Commerce</p>
+        <div id="socials">
+            <a href="#"><img src="images/facebook-icon.svg" alt="Facebook"></a>
+            <a href="#"><img src="images/twitter-icon.svg" alt="Twitter"></a>
+            <a href="#"><img src="images/linkedin-icon.svg" alt="LinkedIn"></a>
         </div>
-      </div>
+    </footer>
 
-      <div class="card">
-        <h3>Silver Membership</h3>
-        <button onclick="openModal('silverModal')">View Benefits</button>
-      </div>
-      <div id="silverModal" class="modal" style="display:none;">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('silverModal')">&times;</span>
-          <h2>Silver Benefits</h2>
-          <p>Spotlight advertising, training sessions, more event discounts.</p>
-        </div>
-      </div>
-
-      <!-- Gold -->
-      <div class="card">
-        <h3>Gold Membership</h3>
-        <button onclick="openModal('goldModal')">View Benefits</button>
-      </div>
-      <div id="goldModal" class="modal" style="display:none;">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('goldModal')">&times;</span>
-          <h2>Gold Benefits</h2>
-          <p>Premium advertising, event sponsorship, full discounts, priority services.</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Raymond Bamutesiza</p>
-  </footer>
-
-  <script src="scripts/join.js"></script>
+    <script src="scripts/join.js" defer></script>
 </body>
 </html>
