@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Our Chamber</title>
+  <link rel="stylesheet" href="styles/small.css" media="screen and (max-width: 767px)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+</head>
+<body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="membership-form">
+      <h2>Membership Application</h2>
+      <form action="thankyou.html" method="get">
+
+        <label for="fname" title="First Name">First Name:
+          <input type="text" id="fname" name="fname" required autocomplete="given-name">
+        </label>
+
+        <label for="lname" title="Last Name">Last Name:
+          <input type="text" id="lname" name="lname" required autocomplete="family-name">
+        </label>
+
+        <label for="title" title="Organizational Title">Organizational Title:
+          <input type="text" id="title" name="title" autocomplete="organization-title"
+                 pattern="[A-Za-z\\-\\s]{7,}" title="Minimum 7 letters, hyphens, or spaces">
+        </label>
+
+        <label for="email" title="Email">Email:
+          <input type="email" id="email" name="email" placeholder="example@email.com"
+                 required autocomplete="email">
+        </label>
+
+        <label for="phone" title="Mobile Phone">Mobile Phone:
+          <input type="tel" id="phone" name="phone" required autocomplete="tel">
+        </label>
+
+        <label for="business" title="Business/Organization">Business/Organization:
+          <input type="text" id="business" name="business" required autocomplete="organization">
+        </label>
+
+        <label for="membership" title="Membership Level">Membership Level:
+          <select id="membership" name="membership" required>
+            <option value="np">Non-Profit</option>
+            <option value="bronze">Bronze</option>
+            <option value="silver">Silver</option>
+            <option value="gold">Gold</option>
+          </select>
+        </label>
+
+        <label for="description" title="Business Description">Business Description:
+          <textarea id="description" name="description"></textarea>
+        </label>
+
+        <!-- Hidden timestamp -->
+        <input type="hidden" id="timestamp" name="timestamp" value="">
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+
+    <!-- Membership Cards -->
+    <section class="cards">
+
+      <div class="card">
+        <h3>Non-Profit Membership</h3>
+        <button onclick="openModal('npModal')">View Benefits</button>
+      </div>
+      <div id="npModal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('npModal')">&times;</span>
+          <h2>Non-Profit Benefits</h2>
+          <p>No fee, community support, event participation.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Bronze Membership</h3>
+        <button onclick="openModal('bronzeModal')">View Benefits</button>
+      </div>
+      <div id="bronzeModal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
+          <h2>Bronze Benefits</h2>
+          <p>Basic advertising, event discounts, networking opportunities.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Silver Membership</h3>
+        <button onclick="openModal('silverModal')">View Benefits</button>
+      </div>
+      <div id="silverModal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('silverModal')">&times;</span>
+          <h2>Silver Benefits</h2>
+          <p>Spotlight advertising, training sessions, more event discounts.</p>
+        </div>
+      </div>
+
+      <!-- Gold -->
+      <div class="card">
+        <h3>Gold Membership</h3>
+        <button onclick="openModal('goldModal')">View Benefits</button>
+      </div>
+      <div id="goldModal" class="modal" style="display:none;">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('goldModal')">&times;</span>
+          <h2>Gold Benefits</h2>
+          <p>Premium advertising, event sponsorship, full discounts, priority services.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Raymond Bamutesiza</p>
+  </footer>
+
+  <script src="scripts/join.js"></script>
+</body>
+</html>
