@@ -43,27 +43,32 @@
             <h2>Membership Application</h2>
             <form action="thankyou.html" method="get">
                 <label for="fname">First Name:
-                    <input type="text" id="fname" name="fname" required>
+                    <input type="text" id="fname" name="fname" required autocomplete="given-name" placeholder="John" title="Enter your first name">
                 </label>
 
                 <label for="lname">Last Name:
-                    <input type="text" id="lname" name="lname" required>
+                    <input type="text" id="lname" name="lname" required autocomplete="family-name" placeholder="Doe" title="Enter your last name">
                 </label>
 
                 <label for="email">Email:
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com" title="Enter your email address">
                 </label>
 
                 <label for="phone">Mobile Phone:
-                    <input type="tel" id="phone" name="phone" required>
+                    <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="+1-555-555-5555" title="Enter your mobile phone number">
                 </label>
 
-                <label for="business">Business/Organization:
-                    <input type="text" id="business" name="business" required>
+                <label for="business">Organization Name:
+                    <input type="text" id="business" name="business" required autocomplete="organization" placeholder="Example Corp" title="Enter your organization name">
+                </label>
+
+                <label for="title">Organization Title:
+                    <input type="text" id="title" name="title" autocomplete="organization-title" placeholder="CEO, Manager" title="Enter your job title at the organization">
                 </label>
 
                 <label for="membership">Membership Level:
-                    <select id="membership" name="membership" required>
+                    <select id="membership" name="membership" required title="Select a membership level">
+                        <option value="" disabled selected>Select Membership Level</option>
                         <option value="np">Non-Profit</option>
                         <option value="bronze">Bronze</option>
                         <option value="silver">Silver</option>
@@ -71,10 +76,9 @@
                     </select>
                 </label>
 
-                <label for="description">Business Description:
-                    <textarea id="description" name="description"></textarea>
+                <label for="description">Organization Description:
+                    <textarea id="description" name="description" placeholder="Brief description of your organization" title="Enter a description of your organization"></textarea>
                 </label>
-
                 <input type="hidden" id="timestamp" name="timestamp" value="">
 
                 <button type="submit">Submit Application</button>
@@ -86,6 +90,7 @@
         <p>&copy; 2025 Raymond Chamber of Commerce</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Add defer to ensure script loads after HTML parsing -->
+    <script src="script.js" defer></script>
 </body>
 </html>
