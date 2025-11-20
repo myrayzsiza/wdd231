@@ -1,173 +1,7 @@
-nav li {
-  margin: 0 1rem;
-}
-
-.directory {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-@media (min-width: 1024px) {
-  .directory {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.events, .weather, .spotlights {
-  display: flex;
-  justify-content: space-around;
-  margin: 2rem;
-}
-
-.spotlights div {
-  flex: 1;
-  margin: 0 1rem;
-}
-
-.card {
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-footer {
-  background-color: #004466;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-#socials {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#socials img {
-  height: 30px;
-  width: 30px;
-  object-fit: contain;
-}
-
-#membersContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 1rem 0;
-}
-
-.member-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.member-card:hover {
-  transform: translateY(-5px);
-}
-
-.member-card img {
-  width: 100%;
-  max-height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-#membersContainer.list {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-#membersContainer.list .member-card {
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  text-align: left;
-}
-
-#membersContainer.list .member-card img {
-  width: 150px;
-  height: 150px;
-  margin-right: 2rem;
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  max-height: 700px;
-  border-radius: 0;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.2);
-  pointer-events: none;
-}
-
-.cta {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-
-.btn {
-  background: #ff6600;
-  color: white;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  transition: background 0.3s ease;
-}
-
-.btn:hover {
-  background: #e65c00;
-}
-
-#logo-area img {
-  width: 150px;
-  height: auto;
-  max-height: 50px;
-  display: block;
-}
-
 body {
   font-family: Arial, sans-serif;
   background: #f9f9f9;
-  color: #333;
+  color: #222;
   margin: 0;
   padding: 0;
 }
@@ -179,6 +13,13 @@ header, footer {
   padding: 1rem;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -187,62 +28,36 @@ nav ul {
   gap: 1rem;
 }
 
+nav li {
+  margin: 0 1rem;
+}
+
 nav a {
   color: #fff;
   text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#logo-area img {
+  width: 150px;
+  height: auto;
+  max-height: 50px;
+  display: block;
 }
 
 main {
   display: flex;
   gap: 2rem;
   justify-content: center;
+  flex-wrap: wrap;
   padding: 2rem;
 }
 
-.membership-form {
-  flex: 1;
-  max-width: 400px;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.cards {
-  flex: 1;
+.directory {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
-  gap: 1rem;
-}
-
-.card {
-  background: #fff;
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: center;
-  animation: fadeIn 1s ease forwards;
-  opacity: 0;
-}
-
-.card h3 {
-  margin-bottom: 0.5rem;
-  color: #004080;
-}
-
-.card button {
-  background: #0066cc;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.card button:hover {
-  background: #004080;
-}
-
-@keyframes fadeIn {
-  to { opacity: 1; }
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
 }
