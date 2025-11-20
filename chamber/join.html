@@ -62,8 +62,10 @@
                     <input type="text" id="business" name="business" required autocomplete="organization" placeholder="Example Corp" title="Enter your organization name">
                 </label>
 
-                <label for="title">Organization Title:
-                    <input type="text" id="orgTitle" name="orgTitle" placeholder="Enter organization title" required pattern="[A-Za-z0-9\s]{2,50}" title="Only letters, numbers, and spaces. 2-50 characters.">
+                <label for="orgTitle">Organization Title:
+                  <input type="text" id="orgTitle" name="orgTitle" autocomplete="organization-title"
+                        placeholder="CEO, Manager" required pattern="[A-Za-z0-9\s]{2,50}"
+                        title="Only letters, numbers, and spaces. 2-50 characters.">
                 </label>
 
                 <label for="membership">Membership Level:
