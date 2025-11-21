@@ -1,4 +1,4 @@
-// Fill hidden timestamp when page loads
+
 document.addEventListener("DOMContentLoaded", () => {
   const timestampField = document.getElementById("timestamp");
   if (timestampField) {
@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Open modal by ID
 function openModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
@@ -14,22 +13,18 @@ function openModal(id) {
   }
 }
 
-// Close modal by ID
 function closeModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
     modal.style.display = "none";
   }
 }
-// Run after page loads
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Fill hidden timestamp on join.html
   const timestampField = document.getElementById("timestamp");
   if (timestampField) {
     timestampField.value = new Date().toISOString();
   }
 
-  // 2. Show submitted values on thankyou.html
   const params = new URLSearchParams(window.location.search);
 
   const fields = ["fname", "lname", "email", "phone", "business", "timestamp"];
@@ -41,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// 3. Modal open/close functions (used in join.html)
 function openModal(id) {
   const modal = document.getElementById(id);
   if (modal) {
@@ -55,3 +49,10 @@ function closeModal(id) {
     modal.style.display = "none";
   }
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const lastModifiedEl = document.getElementById("lastModified");
+  if (lastModifiedEl) {
+    lastModifiedEl.textContent = document.lastModified;
+  }
+});
+
