@@ -1,0 +1,52 @@
+@media (min-width: 641px) and (max-width: 1024px) {
+  #discover-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "item1 item2"
+      "item3 item4"
+      "item5 item6"
+      "item7 item8";
+  }
+
+  #card1 { grid-area: item1; }
+  #card2 { grid-area: item2; }
+  #card3 { grid-area: item3; }
+  #card4 { grid-area: item4; }
+  #card5 { grid-area: item5; }
+  #card6 { grid-area: item6; }
+  #card7 { grid-area: item7; }
+  #card8 { grid-area: item8; }
+
+  .card {
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .card button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .card button:hover {
+    background: #555;
+  }
+}

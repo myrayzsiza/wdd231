@@ -3,8 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta name="description" content="Discover attractions, businesses, and services listed by the Chamber of Commerce.">
+  <meta name="keywords" content="chamber, commerce, discover, local businesses, attractions, directory, community">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta property="og:title" content="Chamber Discover Page">
+  <meta property="og:description" content="Discover attractions, businesses, and services listed by the Chamber of Commerce.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com/chamber/discover.html">
+  <meta property="og:image" content="images/og-image.png">
+
   <title>Chamber Discover Page</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="canonical" href="https://example.com/chamber/discover.html">
+
+  <link rel="stylesheet" href="styles/discoversmall.css">
+  <link rel="stylesheet" href="styles/discovermedium.css">
+  <link rel="stylesheet" href="styles/discoverlarge.css">
+
   <script src="scripts/discover.mjs" type="module" defer></script>
 </head>
 <body>
@@ -19,23 +37,15 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <section id="visitor-message"></section>
-    <section id="discover-grid">
-      <article class="card">
-        <h2>Item Title</h2>
-        <figure>
-          <img src="images/sample.webp" alt="Sample Item">
-          <figcaption>Sample Image</figcaption>
-        </figure>
-        <address>123 Main Street, City</address>
-        <p>This is a short description of the item of interest.</p>
-        <button>Learn More</button>
-      </article>
-    </section>
+    <section id="discover-grid"></section>
   </main>
+
   <footer>
-    <p>&copy; 2025 My Chamber of Commerce | All rights reserved</p>
+    <p>&copy; 2025 Raymond Bamutesiza Chamber of Commerce | All rights reserved</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
   </footer>
 </body>
 </html>

@@ -12,7 +12,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="My Chamber of Commerce | Welcome">
   <meta property="og:description" content="Join the Chamber of Commerce and explore our members, events, and local updates.">
-  <meta property="og:image" content="https://username.github.io/wdd231/chamber/images/hero.jpg">
+  <meta property="og:image" content="images/hero.webp">
   <meta property="og:url" content="https://username.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
 
@@ -23,10 +23,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 768px)">
+  <link rel="stylesheet" href="styles/medium.css" media="screen and (min-width: 641px)">
+  <link rel="stylesheet" href="styles/large.css" media="screen and (min-width: 1025px)">
 </head>
 <body>
-  <header id="siteHeader">
+  <header>
     <div id="logo-area">
       <img src="images/logo.svg" alt="Chamber Logo">
       <span id="site-title">My Chamber of Commerce</span>
@@ -36,6 +37,7 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="directory.html">Directory</a></li>
         <li><a href="join.html">Join</a></li>
+        <li><a href="discover.html">Discover</a></li>
       </ul>
       <button id="hamburger">&#9776;</button>
     </nav>
@@ -69,7 +71,7 @@
       <div id="forecast"></div>
     </section>
 
-    <!-- Company Spotlights -->
+    <!-- Member Spotlights -->
     <section class="spotlights">
       <h2>Member Spotlights</h2>
       <div id="spotlight-container"></div>
@@ -77,18 +79,24 @@
   </main>
 
   <footer>
-  <div id="socials">
-    <img src="images/facebook-icon.svg" alt="Facebook">
-    <img src="images/twitter-icon.svg" alt="Twitter">
-    <img src="images/linkedin-icon.svg" alt="LinkedIn">
-    <img src="images/github-icon.svg" alt="GitHub">
-  </div>
-  <p>&copy; <span id="currentyear"></span> Raymond Bamutesiza</p>
-  <p>Last Modified: <span id="lastModified"></span></p>
-</footer>
+    <div id="socials">
+      <img src="images/facebook-icon.svg" alt="Facebook">
+      <img src="images/twitter-icon.svg" alt="Twitter">
+      <img src="images/linkedin-icon.svg" alt="LinkedIn">
+      <img src="images/github-icon.svg" alt="GitHub">
+    </div>
+    <p>&copy; <span id="currentyear"></span> Raymond Bamutesiza | All rights reserved</p>
+    <p>Last Modified: <span id="lastModified"></span></p>
+  </footer>
 
   <!-- JS -->
   <script src="scripts/weather.js" defer></script>
   <script src="scripts/spotlight.js" defer></script>
+  <script>
+    // Fill current year
+    document.getElementById("currentyear").textContent = new Date().getFullYear();
+    // Fill last modified
+    document.getElementById("lastModified").textContent = new Date(document.lastModified).toLocaleDateString();
+  </script>
 </body>
 </html>
