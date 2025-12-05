@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "title": "Interstellar",
+    "year": 2014,
+    "genre": "Sci-Fi/Action",
+    "rating": "8.6",
+    "image": "images/interstellar.jpg",
+    "description": "A team of explorers travel through a wormhole in space to ensure humanity's survival."
+  },
+  {
+    "id": 2,
+    "title": "The Matrix",
+    "year": 1999,
+    "genre": "Sci-Fi/Action",
+    "rating": "8.7",
+    "image": "images/matrix.jpg",
+    "description": "A hacker discovers the true nature of his reality and his role in the war against its controllers."
+  },
+  {
+    "id": 3,
+    "title": "Inception",
+    "year": 2010,
+    "genre": "Sci-Fi/Action",
+    "rating": "8.8",
+    "image": "images/inception.jpg",
+    "description": "A thief steals corporate secrets through the use of dream-sharing technology."
+  },
+  {
+    "id": 4,
+    "title": "Edge of Tomorrow",
+    "year": 2014,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.9",
+    "image": "images/edge_of_tomorrow.jpg",
+    "description": "A soldier relives the same day over and over while fighting an alien invasion."
+  },
+  {
+    "id": 5,
+    "title": "Guardians of the Galaxy",
+    "year": 2014,
+    "genre": "Sci-Fi/Action",
+    "rating": "8.0",
+    "image": "images/guardians.jpg",
+    "description": "A group of intergalactic criminals must work together to stop a fanatical warrior."
+  },
+  {
+    "id": 6,
+    "title": "Avatar",
+    "year": 2009,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.8",
+    "image": "images/avatar.jpg",
+    "description": "A paraplegic Marine is dispatched to Pandora on a unique mission."
+  },
+  {
+    "id": 7,
+    "title": "Star Wars: The Force Awakens",
+    "year": 2015,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.8",
+    "image": "images/star_wars.jpg",
+    "description": "Three decades after the defeat of the Galactic Empire, a new threat arises in the galaxy."
+  },
+  {
+    "id": 8,
+    "title": "Terminator 2: Judgment Day",
+    "year": 1991,
+    "genre": "Sci-Fi/Action",
+    "rating": "8.5",
+    "image": "images/terminator2.jpg",
+    "description": "A cyborg, identical to the one who failed to kill Sarah Connor, must protect her son."
+  },
+  {
+    "id": 9,
+    "title": "Blade Runner 2049",
+    "year": 2017,
+    "genre": "Sci-Fi/Action",
+    "rating": "8.0",
+    "image": "images/blade_runner.jpg",
+    "description": "A young blade runner discovers a long-buried secret that could plunge society into chaos."
+  },
+  {
+    "id": 10,
+    "title": "The Avengers",
+    "year": 2012,
+    "genre": "Sci-Fi/Action",
+    "rating": "8.0",
+    "image": "images/avengers.jpg",
+    "description": "Earth's mightiest heroes must come together to stop Loki and his alien army."
+  },
+  {
+    "id": 11,
+    "title": "Minority Report",
+    "year": 2002,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.6",
+    "image": "images/minority_report.jpg",
+    "description": "In a future where a special police unit can arrest murderers before they commit crimes."
+  },
+  {
+    "id": 12,
+    "title": "Pacific Rim",
+    "year": 2013,
+    "genre": "Sci-Fi/Action",
+    "rating": "6.9",
+    "image": "images/pacific_rim.jpg",
+    "description": "Humans pilot giant robots to fight monstrous sea creatures."
+  },
+  {
+    "id": 13,
+    "title": "Oblivion",
+    "year": 2013,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.0",
+    "image": "images/oblivion.jpg",
+    "description": "A drone repairman uncovers a hidden truth about Earth and his own mission."
+  },
+  {
+    "id": 14,
+    "title": "The Fifth Element",
+    "year": 1997,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.7",
+    "image": "images/fifth_element.jpg",
+    "description": "A cab driver becomes central to saving the world with a mysterious woman."
+  },
+  {
+    "id": 15,
+    "title": "Ready Player One",
+    "year": 2018,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.5",
+    "image": "images/ready_player_one.jpg",
+    "description": "In a virtual reality world, a young man searches for an Easter egg to inherit a fortune."
+  }
+]

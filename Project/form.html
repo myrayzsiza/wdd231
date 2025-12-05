@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact form page.">
+  <meta name="author" content="Raymond">
+  <title>Contact Us</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+<header>
+  <div class="logo">Movie Review Hub</div>
+  <button id="ham">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="form.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Contact Us</h1>
+
+  <form action="form-action.html" method="get">
+    <label>Full Name
+      <input type="text" name="name" required>
+    </label>
+
+    <label>Email
+      <input type="email" name="email" required>
+    </label>
+
+    <label>Message
+      <textarea name="message" required></textarea>
+    </label>
+
+    <button type="submit">Send</button>
+  </form>
+</main>
+
+<footer>
+  <p>© 2025 Movie Review Hub</p>
+  <a href="#">Video Demo</a>
+  <a href="#">Attributions</a>
+    <footer>
+  <p>© 2025 Movie Review Hub | Created by Raymond</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <p id="last-modified"></p>
+</footer>
+
+</footer>
+  <script src="scripts/navigation.js" type="module" defer></script>
+</body>
+</html>
