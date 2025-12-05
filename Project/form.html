@@ -3,67 +3,73 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact form page.">
+  <meta name="description" content="Contact form page for Galactic Action Reviews.">
   <meta name="author" content="Raymond">
-  <title>Contact Us</title>
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+  <title>Contact Galactic Action Reviews</title>
+  
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Verdana:wght@400;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-<header>
-  <div class="logo">Movie Review Hub</div>
-  <button id="ham">☰</button>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="movies.html">Movies</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="form.html" class="active">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  
+  <header>
+    <div class="logo">GALACTIC ACTION REVIEWS</div>
+    <button id="ham">☰</button>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="movies.html">Movies</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="form.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <h1>Contact Us</h1>
+  <main>
+    <h1>Contact Us</h1>
 
-  <form action="form-action.html" method="get">
-    <label>Full Name
-      <input type="text" name="name" required>
-    </label>
+    <form action="form-action.html" method="get">
+      
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
 
-    <label>Email
-      <input type="email" name="email" required>
-    </label>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-    <label>Message
-      <textarea name="message" required></textarea>
-    </label>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
 
-    <button type="submit">Send</button>
-  </form>
-</main>
+      <button type="submit">SEND TRANSMISSION</button>
+    </form>
+  </main>
 
-<footer>
-  <p>© 2025 Movie Review Hub</p>
-  <a href="#">Video Demo</a>
-  <a href="#">Attributions</a>
-    <footer>
-  <p>© 2025 Movie Review Hub | Created by Raymond</p>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <p id="last-modified"></p>
-</footer>
+  <footer>
+    <p>© <span id="currentyear"></span> GALACTIC ACTION REVIEWS | Created by Raymond</p>
+    
+    <div class="footer-links">
+      <a href="#">Video Demo</a>
+      <a href="#">Attributions</a>
+    </div>
 
-</footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <p id="last-modified"></p>
+  </footer>
+
+  <script>
+    // Script to dynamically update the current year and last modified date
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('last-modified').textContent = "Last Updated: " + document.lastModified;
+  </script>
   <script src="scripts/navigation.js" type="module" defer></script>
 </body>
 </html>
