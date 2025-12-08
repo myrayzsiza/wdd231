@@ -1,9 +1,28 @@
-const ham = document.querySelector("#ham");
-const nav = document.querySelector("nav ul");
+const ham = document.getElementById('ham');
+const navEl = document.querySelector('nav');
 
-if (ham) {
-  ham.addEventListener("click", () => {
-    nav.classList.toggle("open");
+if (ham && navEl) {
+  ham.addEventListener('click', () => {
+    const isOpen = navEl.classList.toggle('active');
+    ham.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close menu when a nav link is clicked (mobile)
+  navEl.addEventListener('click', (e) => {
+    const target = e.target;
+    if (target && target.matches('a')) {
+      navEl.classList.remove('active');
+      ham.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  // Allow Enter/Space to toggle when focused
+  ham.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      const isOpen = navEl.classList.toggle('active');
+      ham.setAttribute('aria-expanded', String(isOpen));
+    }
   });
 }
 

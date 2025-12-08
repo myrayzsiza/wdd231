@@ -81,7 +81,7 @@ main {
   height: 60vh;
   background-image: url('../images/hero.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   display: flex;
   align-items: center;
   padding: 40px 20px;
@@ -563,6 +563,10 @@ dialog button:hover {
   .hero {
     height: 45vh;
     margin-bottom: 30px;
+    /* On small/medium screens, fit the full hero image instead of cropping */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   .hero h1 {
@@ -616,6 +620,10 @@ dialog button:hover {
   .hero {
     padding: 15px;
     height: 40vh;
+    /* On very small screens, make the hero image fit the viewport */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 
   .hero h1 {
@@ -718,9 +726,6 @@ body.site-plan footer {
   border-top: 2px solid #0d6efd;
   color: #333;
 }
-  font-weight: bold;
-  text-shadow: 0 0 5px rgba(255,255,255,0.8);
-}
 
 /* Hero */
 .hero {
@@ -728,7 +733,7 @@ body.site-plan footer {
   height: 85vh;
   background-image: url('../images/hero.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
   display: flex;
   align-items: center;
   padding: 0 50px;
