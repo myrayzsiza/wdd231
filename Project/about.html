@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="About Movie Review Hub.">
-  <meta name="author" content="Raymond">
-  <meta property="og:title" content="About">
-  <meta property="og:description" content="Learn about the purpose of this movie website.">
+  <meta name="description" content="Learn about Movie Review Hub - our mission to help you discover the best sci-fi and action movies.">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta property="og:title" content="Movie Review Hub | About Us">
+  <meta property="og:description" content="Learn about our mission to help you discover amazing sci-fi and action movies.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/about.html">
   <link rel="icon" href="images/favicon.png">
 
   <title>Movie Review Hub | About</title>
-    <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
@@ -20,7 +21,7 @@
 <header>
   <div class="logo">Movie Review Hub</div>
 
-  <button id="ham">☰</button>
+  <button id="ham" aria-label="Menu">☰</button>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -35,23 +36,46 @@
   <h1>About This Site</h1>
   <p>This website helps people discover sci-fi and action movies.</p>
   <p>It shows reviews, ratings, and details for 15 movies.</p>
+  
+  <button id="open-mission" style="background-color: #ff3333; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem; font-weight: bold;">Learn Our Mission</button>
+  
+  <dialog id="mission-modal" style="background-color: #1a1a2e; border: 2px solid #0d6efd; border-radius: 8px; padding: 30px; max-width: 600px; color: #e5e5e5;">
+    <h2 style="color: #0d6efd; margin-top: 0;">Our Mission</h2>
+    <p>At Movie Review Hub, we're passionate about helping movie enthusiasts discover incredible sci-fi and action films. Our curated collection of 15 must-watch movies spans from timeless classics to modern masterpieces, each carefully selected and rated to help you find your next favorite film.</p>
+    <p>We believe great movies inspire, entertain, and transport us to new worlds. Whether you're looking for mind-bending sci-fi concepts or pulse-pounding action sequences, we've got you covered.</p>
+    <button id="close-mission" style="background-color: #ff3333; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">Close</button>
+  </dialog>
+
+  <script>
+    const missionModal = document.getElementById('mission-modal');
+    const openBtn = document.getElementById('open-mission');
+    const closeBtn = document.getElementById('close-mission');
+    
+    openBtn.addEventListener('click', () => missionModal.showModal());
+    closeBtn.addEventListener('click', () => missionModal.close());
+    
+    missionModal.addEventListener('click', (e) => {
+      if(e.target === missionModal) missionModal.close();
+    });
+    
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && missionModal.open) missionModal.close();
+    });
+  </script>
 </main>
 
 <footer>
-  <p>© 2025 Movie Review Hub</p>
-  <a href="#">Video Demo</a>
-  <a href="#">Attributions</a>
-  <footer>
-  <p>© 2025 Movie Review Hub | Created by Raymond</p>
-  <div class="social-icons">
-    <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+  <p>© 2025 Movie Review Hub | Created by Raymond Bamutesiza</p>
+  <div class="footer-links">
+    <a href="#">Video Demo</a>
+    <a href="#">Attributions</a>
   </div>
-  <p id="last-modified"></p>
-</footer>
-
+  <div class="social-icons">
+    <a href="https://www.facebook.com/Myrayz Siza" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com/Raymond Bamutesiza" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/myrayz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
   <p id="last-modified"></p>
 </footer>
     <script src="scripts/navigation.js" type="module" defer></script>

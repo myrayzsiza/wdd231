@@ -3,10 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Home page for movie review site.">
-  <meta name="author" content="Raymond">
-  <meta property="og:title" content="Movie Review Hub">
-  <meta property="og:description" content="Explore sci-fi and action movies with reviews.">
+  <meta name="description" content="Discover and review the best sci-fi and action movies. Your ultimate destination for movie ratings and recommendations.">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta property="og:title" content="Movie Review Hub | Sci-Fi & Action Movies">
+  <meta property="og:description" content="Discover and review the best sci-fi and action movies with detailed ratings and recommendations.">
+  <meta property="og:image" content="https://yoursite.com/images/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/index.html">
   <link rel="icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,13 +18,13 @@
 
 
   <title>Movie Review Hub | Home</title>
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
+<body class="home">
 <header>
   <div class="logo">Movie Review Hub</div>
-  <button id="ham">☰</button>
+  <button id="ham" aria-label="Menu">☰</button>
+  <button id="header-watchlist" aria-label="Open watchlist" title="Watchlist" style="background:none;border:none;color:#0d6efd;font-size:20px;cursor:pointer;margin-left:8px;">🔖</button>
   <nav>
     <ul>
       <li><a href="index.html" class="active">Home</a></li>
@@ -33,44 +36,65 @@
 </header>
 
 <main>
-  <section class="hero">
-    <h1>Welcome to Movie Review Hub</h1>
-    <p>Your place to explore the best sci-fi and action movies.</p>
+  <section class="hero" aria-label="Homepage hero">
+    <img src="images/hero.jpg" alt="Sci-fi movie collage" class="sr-only" loading="lazy">
+    <div class="hero-content">
+      <h1>Welcome to Movie Review Hub</h1>
+      <p>Your place to explore the best sci-fi and action movies.</p>
+    </div>
   </section>
 
   <section class="feature-grid">
-    <div class="feature-card">
+    <div class="feature-card" data-action="latest" id="feature-latest">
       <h2>Latest Reviews</h2>
-      <p>Get fresh reviews from new and classic movies.</p>
+      <p>Get fresh reviews from movies 2015 and newer.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card" data-action="top" id="feature-top">
       <h2>Top Rated</h2>
-      <p>See which movies are loved the most.</p>
+      <p>See which movies are rated 7.0 and above.</p>
     </div>
-    <div class="feature-card">
+    <div class="feature-card" data-action="watchlist" id="feature-watchlist">
       <h2>Watchlist</h2>
       <p>Save movies you want to watch later.</p>
     </div>
   </section>
+
+  <!-- Results area for feature filters -->
+  <section id="feature-results" aria-live="polite" style="display:none;">
+    <h2 class="section-title">Results</h2>
+    <div id="results-container" class="movie-grid"></div>
+  </section>
+
+  <!-- Watchlist modal -->
+  <dialog id="watchlist-modal">
+    <h2>Your Watchlist</h2>
+    <div id="watchlist-container" class="movie-grid"></div>
+    <button id="close-watchlist" style="background-color:#ff3333;color:#fff;border:none;padding:8px 14px;border-radius:6px;">Close</button>
+  </dialog>
+
+  <!-- Movie details modal (used by index and movies pages) -->
+  <dialog id="movie-modal">
+    <div id="modal-content"></div>
+    <button id="close-modal" class="btn btn-danger" style="margin-top:12px;">Close</button>
+  </dialog>
 </main>
 
 <footer>
-  <p>© 2025 Movie Review Hub</p>
-  <a href="#">Video Demo</a>
-  <a href="#">Attributions</a>
-    <footer>
-  <p>© 2025 Movie Review Hub | Created by Raymond</p>
+  <p>© 2025 Movie Review Hub | Created by Raymond Bamutesiza</p>
+  <div class="footer-links">
+    <a href="#">Video Demo</a>
+    <a href="#">Attributions</a>
+  </div>
   <div class="social-icons">
-    <a href="https://www.facebook.com/Myrayz Siza" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.twitter.com/Raymond Bamutesiza" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/myrayz" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.facebook.com/Myrayz Siza" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com/Raymond Bamutesiza" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/myrayz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
   </div>
   <p id="last-modified"></p>
 </footer>
 
-</footer>
-
+<script src="scripts/index.js" type="module" defer></script>
 <script src="scripts/navigation.js" type="module" defer></script>
 </body>
 </html>

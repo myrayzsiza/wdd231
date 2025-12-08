@@ -16,42 +16,55 @@ async function fetchMovies() {
 
 function displayMovies(movies) {
   moviesContainer.innerHTML = '';
-  movies.forEach(movie => {
-    const movieCard = document.createElement('div');
-    movieCard.className = 'card';
-    movieCard.innerHTML = `
-      <img src="${movie.image}" alt="${movie.title}">
-      <h3>${movie.title} (${movie.year})</h3>
-      <p>Genre: ${movie.genre}</p>
-      <p>Rating: ${movie.rating}</p>
-      <button data-id="${movie.id}">More Info</button>
-    `;
-
-    const button = movieCard.querySelector('button');
-    button.addEventListener('click', () => showModal(movie));
-
-    moviesContainer.appendChild(movieCard);
+  const movieCards = movies.map(movie => `
+    <div class="movie-card" data-id="${movie.id}">
+      <img src="${movie.image}" alt="${movie.title}" loading="lazy">
+      <div class="movie-info">
+        <h3>${movie.title}</h3>
+        <p>${movie.year} | ${movie.genre}</p>
+        <span>Rating: <span style="color:#ff3333;font-weight:bold">${movie.rating}/10</span></span>
+      </div>
+      <div class="movie-actions" style="padding:12px;">
+        <button class="btn btn-primary more-info-btn" data-id="${movie.id}">More Info</button>
+      </div>
+    </div>
+  `).join('');
+  
+  moviesContainer.innerHTML = movieCards;
+  
+  document.querySelectorAll('.more-info-btn').forEach(btn => {
+    btn.addEventListener('click', async (e) => {
+      const movieId = e.target.dataset.id;
+      const response = await fetch('data/movies.json');
+      const movies = await response.json();
+      const movie = movies.find(m => m.id == movieId);
+      showModal(movie);
+    });
   });
 }
 
 function showModal(movie) {
   modalContent.innerHTML = `
-    <h2>${movie.title} (${movie.year})</h2>
+    <h2>${movie.title}</h2>
+    <div style="text-align: center; margin-bottom: 15px;">
+      <img src="${movie.image}" alt="${movie.title}" style="width: 100%; max-width: 300px; border-radius: 8px;">
+    </div>
+    <p><strong>Year:</strong> ${movie.year}</p>
     <p><strong>Genre:</strong> ${movie.genre}</p>
-    <p><strong>Rating:</strong> ${movie.rating}</p>
-    <p>${movie.description}</p>
-    <img src="${movie.image}" alt="${movie.title}" style="width:50%; margin-top:10px;">
+    <p><strong>Rating:</strong> <span style="color: #ff3333; font-weight: bold;">${movie.rating}/10</span></p>
+    <p><strong>Synopsis:</strong></p>
+    <p style="line-height: 1.8;">${movie.description}</p>
   `;
-  modal.style.display = 'block';
+  modal.showModal();
 }
 
 closeModalBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
+  modal.close();
 });
 
-window.addEventListener('click', (e) => {
-  if(e.target == modal) {
-    modal.style.display = 'none';
+modal.addEventListener('click', (e) => {
+  if(e.target === modal) {
+    modal.close();
   }
 });
 

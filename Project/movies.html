@@ -3,24 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Movie list and reviews.">
-  <meta name="author" content="Raymond">
-  <meta property="og:title" content="Movies">
-  <meta property="og:description" content="Browse 15 featured movies.">
+  <meta name="description" content="Browse our collection of 15 handpicked sci-fi and action movies with ratings, reviews, and detailed information.">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta property="og:title" content="Movie Review Hub | Movies">
+  <meta property="og:description" content="Explore 15 curated sci-fi and action films with ratings and reviews.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/movies.html">
   <link rel="icon" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <title>Movie Review Hub | Movies</title>
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body>
 <header>
   <div class="logo">Movie Review Hub</div>
-  <button id="ham">☰</button>
+  <button id="ham" aria-label="Menu">☰</button>
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -36,27 +37,24 @@
   <div id="movies-container" class="movie-grid"></div>
 
   <dialog id="movie-modal">
-    <h2></h2>
-    <p></p>
+    <div id="modal-content"></div>
     <button id="close-modal">Close</button>
   </dialog>
 </main>
 
 <footer>
-  <p>© 2025 Movie Review Hub</p>
-  <a href="#">Video Demo</a>
-  <a href="#">Attributions</a>
-    <footer>
-  <p>© 2025 Movie Review Hub | Created by Raymond</p>
+  <p>© 2025 Movie Review Hub | Created by Raymond Bamutesiza</p>
+  <div class="footer-links">
+    <a href="#">Video Demo</a>
+    <a href="#">Attributions</a>
+  </div>
   <div class="social-icons">
-    <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.facebook.com/Myrayz Siza" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com/Raymond Bamutesiza" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/myrayz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
   </div>
   <p id="last-modified"></p>
-</footer>
-
 </footer>
 
 <script src="scripts/movies.js" type="module" defer></script>

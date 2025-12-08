@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Form Submitted</title>
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+  <meta name="description" content="Thank you for contacting Movie Review Hub.">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta property="og:title" content="Movie Review Hub | Thank You">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <title>Movie Review Hub | Thank You</title>
+  <link rel="stylesheet" href="styles/main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -15,25 +19,49 @@
 
 </head>
 <body>
-<main>
-  <h1>Thank You</h1>
+<header>
+  <div class="logo">Movie Review Hub</div>
+  <button id="ham" aria-label="Menu">☰</button>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="movies.html">Movies</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="form.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <p><strong>Name:</strong> <span id="name"></span></p>
-  <p><strong>Email:</strong> <span id="email"></span></p>
-  <p><strong>Message:</strong> <span id="message"></span></p>
+<main>
+  <h1>Thank You for Your Message!</h1>
+  <p style="text-align: center; margin: 30px 0; font-size: 1.1rem;">We've received your submission and will get back to you soon.</p>
+  
+  <div style="background-color: #1a1a2e; padding: 30px; border-radius: 12px; border: 1px solid #0d6efd; max-width: 600px; margin: 30px auto;">
+    <h2 style="color: #0d6efd; margin-top: 0;">Your Information:</h2>
+    <p><strong>Name:</strong> <span id="name" style="color: #e5e5e5;"></span></p>
+    <p><strong>Email:</strong> <span id="email" style="color: #e5e5e5;"></span></p>
+    <p><strong>Message:</strong></p>
+    <p id="message" style="background-color: #0a0e27; padding: 15px; border-radius: 6px; color: #e5e5e5; line-height: 1.6; word-wrap: break-word;"></p>
+  </div>
+  
+  <div style="text-align: center; margin-top: 30px;">
+    <a href="index.html" style="display: inline-block; background-color: #ff3333; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold; margin-right: 15px;">Back to Home</a>
+    <a href="movies.html" style="display: inline-block; background-color: #0d6efd; color: white; padding: 12px 30px; text-decoration: none; border-radius: 6px; font-weight: bold;">Browse Movies</a>
+  </div>
 </main>
 <footer>
-  <footer>
-  <p>© 2025 Movie Review Hub | Created by Raymond</p>
+  <p>© 2025 Movie Review Hub | Created by Raymond Bamutesiza</p>
+  <div class="footer-links">
+    <a href="#">Video Demo</a>
+    <a href="#">Attributions</a>
+  </div>
   <div class="social-icons">
-    <a href="https://www.facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
-    <a href="https://www.twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://www.facebook.com/Myrayz Siza" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    <a href="https://www.twitter.com/Raymond Bamutesiza" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.instagram.com/myrayz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/raymond-bamutesiza-127136357" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
   </div>
   <p id="last-modified"></p>
-</footer>
-
 </footer>
 
 <script src="scripts/form-action.js" type="module" defer></script>

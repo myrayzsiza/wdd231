@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact form page for Galactic Action Reviews.">
-  <meta name="author" content="Raymond">
+  <meta name="description" content="Contact Movie Review Hub to share your feedback, suggestions, or movie recommendations.">
+  <meta name="author" content="Raymond Bamutesiza">
+  <meta property="og:title" content="Movie Review Hub | Contact">
+  <meta property="og:description" content="Get in touch with us at Movie Review Hub.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoursite.com/form.html">
   <title>Contact Galactic Action Reviews</title>
   
-  <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="styles/main.css">
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Verdana:wght@400;700&display=swap" rel="stylesheet">
   
@@ -18,7 +22,8 @@
   
   <header>
     <div class="logo">GALACTIC ACTION REVIEWS</div>
-    <button id="ham">☰</button>
+    <button id="back-btn" class="back-btn" aria-label="Go back">← Back</button>
+    <button id="ham" aria-label="Menu">☰</button>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -35,20 +40,20 @@
     <form action="form-action.html" method="get">
       
       <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="name" placeholder="e.g., John Skywalker" required>
 
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" placeholder="e.g., commander@space.com" required>
 
       <label for="message">Message</label>
-      <textarea id="message" name="message" required></textarea>
+      <textarea id="message" name="message" placeholder="Share your thoughts about our reviews..." required></textarea>
 
       <button type="submit">SEND TRANSMISSION</button>
     </form>
   </main>
 
   <footer>
-    <p>© <span id="currentyear"></span> GALACTIC ACTION REVIEWS | Created by Raymond</p>
+    <p>© <span id="currentyear"></span> GALACTIC ACTION REVIEWS | Created by Raymond Bamutesiza</p>
     
     <div class="footer-links">
       <a href="#">Video Demo</a>

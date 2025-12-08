@@ -133,5 +133,14 @@
     "rating": "7.5",
     "image": "images/ready_player_one.jpg",
     "description": "In a virtual reality world, a young man searches for an Easter egg to inherit a fortune."
+  },
+  {
+    "id": 16,
+    "title": "Marvel's Runaways",
+    "year": 2017,
+    "genre": "Sci-Fi/Action",
+    "rating": "7.0",
+    "image": "images/marvel.jpg",
+    "description": "A group of teenagers discover their parents are part of an evil organization and band together to stop them."
   }
 ]
