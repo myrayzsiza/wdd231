@@ -77,7 +77,7 @@ main {
 
 .hero {
   position: relative;
-  min-height: 60vh; /* covers more than half the viewport */
+  min-height: 60vh;
   height: 60vh;
   background-image: url('../images/hero.jpg');
   background-size: cover;
@@ -97,7 +97,6 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  /* stronger gradient on the left to ensure readable text, fading to transparent */
   background: linear-gradient(90deg, rgba(10,14,39,0.92) 0%, rgba(10,14,39,0.72) 30%, rgba(10,14,39,0.35) 60%, transparent 100%);
   z-index: 1;
 }
@@ -123,7 +122,6 @@ main {
   margin: 0;
 }
 
-/* Accessible helper: visually-hidden but available to screen readers */
 .sr-only {
   position: absolute !important;
   width: 1px !important;
@@ -132,23 +130,20 @@ main {
   margin: -1px !important;
   overflow: hidden !important;
   clip: rect(0, 0, 0, 0) !important;
-  white-space: nowrap !important; /* added line */
+  white-space: nowrap !important;
   border: 0 !important;
 }
 
-/* Homepage: make hero full-bleed and cover the whole viewport */
 body.home .hero {
   height: 100vh;
   min-height: 100vh;
-  border-radius: 0; /* full-bleed hero should not be rounded */
+  border-radius: 0;
 }
 
-/* Prevent double offset from header on homepage (header overlays hero) */
 body.home main {
   margin-top: 0;
 }
 
-/* Responsive adjustments for full-bleed hero */
 @media (max-width: 768px) {
   body.home .hero {
     height: 100vh;
@@ -245,7 +240,6 @@ h1, h2, h3 {
   display: block;
 }
 
-/* Ensure images inside cards and dialogs have rounded corners */
 .movie-card img,
 .feature-card img,
 .hero img,
@@ -448,7 +442,6 @@ dialog button:hover {
   background-color: #cc0000;
 }
 
-/* Reusable button styles for site-wide consistency */
 .btn {
   display: inline-block;
   padding: 8px 12px;
@@ -486,7 +479,6 @@ dialog button:hover {
   pointer-events: none;
 }
 
-/* Back button (site-wide) */
 .back-btn {
   background: rgba(255,255,255,0.04);
   color: #e5e5e5;
@@ -511,17 +503,16 @@ dialog button:hover {
   .back-btn { font-size: 18px; padding: 10px; }
 }
 
-/* Make 'More Info' buttons a darker, less-bright red to improve contrast and tone */
 .btn.more-info-btn,
 .more-info-btn {
-  background-color: #b21f1f; /* darker red */
+  background-color: #b21f1f;
   color: #fff;
   border: none;
 }
 
 .btn.more-info-btn:hover,
 .more-info-btn:hover {
-  background-color: #8f1a1a; /* slightly darker on hover */
+  background-color: #8f1a1a;
 }
 
 @media (max-width: 768px) {
@@ -563,7 +554,6 @@ dialog button:hover {
   .hero {
     height: 45vh;
     margin-bottom: 30px;
-    /* On small/medium screens, fit the full hero image instead of cropping */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -620,7 +610,6 @@ dialog button:hover {
   .hero {
     padding: 15px;
     height: 40vh;
-    /* On very small screens, make the hero image fit the viewport */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
@@ -727,7 +716,6 @@ body.site-plan footer {
   color: #333;
 }
 
-/* Hero */
 .hero {
   position: relative;
   height: 85vh;
@@ -850,7 +838,6 @@ footer { background-color:#1a1a1a; color:#808080; padding:40px 50px; margin-top:
   .main-content { padding:10px 15px; }
 }
 
-/* Site plan page styles (scoped) */
 body.site-plan { font-family:Verdana, sans-serif; margin:20px; line-height:1.6; background-color:#f4f4f9; color:#333; }
 body.site-plan h1, body.site-plan h2, body.site-plan h3 { color:#0d6efd; }
 body.site-plan .section { margin-bottom:30px; padding:15px; background:#fff; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1); }
