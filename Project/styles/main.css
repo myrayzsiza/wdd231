@@ -1,9 +1,18 @@
 * { box-sizing: border-box; }
 
+:root {
+  --bg: #0a0e27;
+  --text: #e6eef8;
+  --muted: #9fb0c8;
+  --primary: #3da0ff;
+  --danger: #b21f1f;
+  --accent: #ff6b6b;
+}
+
 body {
   font-family: Roboto, Verdana, sans-serif;
-  background-color: #0a0e27;
-  color: #e5e5e5;
+  background-color: var(--bg);
+  color: var(--text);
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -257,7 +266,7 @@ dialog img {
 .movie-info h3 {
   font-size: 1rem;
   margin: 0 0 8px 0;
-  color: #0d6efd;
+  color: var(--primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -272,9 +281,11 @@ dialog img {
 
 .movie-info span {
   font-size: 0.95rem;
-  color: #ff3333;
+  color: var(--accent);
   font-weight: bold;
 }
+
+.rating-value { color: var(--danger); font-weight: bold; }
 
 main h1 {
   color: #ff3333;
@@ -453,12 +464,12 @@ dialog button:hover {
 }
 
 .btn-primary {
-  background-color: #0d6efd;
+  background-color: var(--primary);
   color: #fff;
 }
 
 .btn-danger {
-  background-color: #ff3333;
+  background-color: var(--danger);
   color: #fff;
 }
 
@@ -716,6 +727,46 @@ body.site-plan footer {
   color: #333;
 }
 
+nav a,
+.footer-links a,
+.social-icons a,
+.logo,
+.feature-card h2,
+.section-title,
+.movie-info h3 {
+  color: var(--primary) !important;
+}
+
+nav a:hover,
+nav a.active,
+.footer-links a:hover,
+.social-icons a:hover,
+.feature-card:hover .feature-card h2 {
+  color: var(--danger) !important;
+}
+
+footer p,
+#last-modified {
+  color: var(--muted) !important;
+}
+
+a:focus,
+button:focus,
+.btn:focus {
+  outline: 3px solid rgba(61,160,255,0.18);
+  outline-offset: 2px;
+}
+
+.rating-value { color: var(--danger); font-weight: 700; }
+
+.feature-card,
+form,
+dialog {
+  border-color: var(--primary);
+}
+
+.muted { color: var(--muted); }
+
 .hero {
   position: relative;
   height: 85vh;
@@ -760,7 +811,7 @@ body.site-plan footer {
 }
 
 .btn-primary {
-  background-color: #e63946;
+  background-color: var(--primary);
   color: white;
   padding: 15px 40px;
   border: none;
@@ -770,11 +821,11 @@ body.site-plan footer {
   text-decoration: none;
   display: inline-block;
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(230,57,70,0.5);
-  transition: background-color 0.3s;
+  box-shadow: 0 0 12px rgba(61,160,255,0.25);
+  transition: background-color 0.2s;
 }
 
-.btn-primary:hover { background-color: #c9333e; }
+.btn-primary:hover { background-color: color-mix(in srgb, var(--primary) 70%, black 30%); }
 
 .main-content { padding: 20px 50px; }
 

@@ -22,10 +22,11 @@ function displayMovies(movies) {
       <div class="movie-info">
         <h3>${movie.title}</h3>
         <p>${movie.year} | ${movie.genre}</p>
-        <span>Rating: <span style="color:#ff3333;font-weight:bold">${movie.rating}/10</span></span>
+        <span>Rating: <span class="rating-value">${movie.rating}/10</span></span>
       </div>
-      <div class="movie-actions" style="padding:12px;">
+      <div class="movie-actions" style="padding:12px; display:flex; gap:8px; align-items:center;">
         <button class="btn btn-primary more-info-btn" data-id="${movie.id}">More Info</button>
+        <button class="btn btn-save watchlist-btn" data-id="${movie.id}">Save</button>
       </div>
     </div>
   `).join('');
@@ -41,6 +42,23 @@ function displayMovies(movies) {
       showModal(movie);
     });
   });
+
+  // Wire watchlist buttons and initialize state
+  document.querySelectorAll('.watchlist-btn').forEach(btn => {
+    const id = btn.dataset.id;
+    if (isInWatchlist(id)) {
+      btn.textContent = 'Saved';
+      btn.disabled = true;
+      btn.classList.add('btn-disabled');
+    }
+    btn.addEventListener('click', (e) => {
+      const mid = e.currentTarget.dataset.id;
+      addToWatchlist(mid);
+      e.currentTarget.textContent = 'Saved';
+      e.currentTarget.disabled = true;
+      e.currentTarget.classList.add('btn-disabled');
+    });
+  });
 }
 
 function showModal(movie) {
@@ -51,7 +69,7 @@ function showModal(movie) {
     </div>
     <p><strong>Year:</strong> ${movie.year}</p>
     <p><strong>Genre:</strong> ${movie.genre}</p>
-    <p><strong>Rating:</strong> <span style="color: #ff3333; font-weight: bold;">${movie.rating}/10</span></p>
+    <p><strong>Rating:</strong> <span class="rating-value">${movie.rating}/10</span></p>
     <p><strong>Synopsis:</strong></p>
     <p style="line-height: 1.8;">${movie.description}</p>
   `;
@@ -67,6 +85,36 @@ modal.addEventListener('click', (e) => {
     modal.close();
   }
 });
+
+// LocalStorage helpers for watchlist (shared key: 'watchlist')
+function getWatchlist() {
+  try {
+    const raw = localStorage.getItem('watchlist');
+    return raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function isInWatchlist(id) {
+  const list = getWatchlist();
+  return list.includes(Number(id));
+}
+
+function addToWatchlist(id) {
+  const list = getWatchlist();
+  const num = Number(id);
+  if (!list.includes(num)) {
+    list.push(num);
+    localStorage.setItem('watchlist', JSON.stringify(list));
+  }
+}
+
+function removeFromWatchlist(id) {
+  let list = getWatchlist();
+  list = list.filter(x => x !== Number(id));
+  localStorage.setItem('watchlist', JSON.stringify(list));
+}
 
 fetchMovies();
 document.addEventListener("DOMContentLoaded", () => {

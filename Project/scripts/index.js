@@ -24,7 +24,7 @@ function renderMovieCards(movies, container, options = {}) {
       <div class="movie-info">
         <h3>${movie.title}</h3>
         <p>${movie.year} | ${movie.genre}</p>
-        <p class="rating">Rating: <span style="color:#ff3333;font-weight:bold">${movie.rating}/10</span></p>
+        <p class="rating">Rating: <span class="rating-value">${movie.rating}/10</span></p>
       </div>
         <div class="movie-actions" style="padding:12px; display:flex; gap:8px; align-items:center;">
           <button class="btn btn-primary more-info-btn" data-id="${movie.id}">More Info</button>
@@ -92,7 +92,7 @@ function showMovieModal(movie) {
       </div>
       <p><strong>Year:</strong> ${movie.year}</p>
       <p><strong>Genre:</strong> ${movie.genre}</p>
-      <p><strong>Rating:</strong> <span style="color:#ff3333;font-weight:bold">${movie.rating}/10</span></p>
+      <p><strong>Rating:</strong> <span class="rating-value">${movie.rating}/10</span></p>
       <p style="line-height:1.6">${movie.description}</p>
     `;
     modalEl.showModal();
@@ -137,14 +137,14 @@ function openWatchlistModal() {
   const movies = allMovies.filter(m => ids.includes(m.id));
   watchlistContainer.innerHTML = '';
   if (movies.length === 0) {
-    watchlistContainer.innerHTML = '<p style="color:#b0b0b0;">Your watchlist is empty.</p>';
+    watchlistContainer.innerHTML = '<p class="muted">Your watchlist is empty.</p>';
   } else {
     renderMovieCards(movies, watchlistContainer);
     // add remove buttons
     watchlistContainer.querySelectorAll('.watchlist-btn').forEach(btn => {
       btn.textContent = 'Remove';
       btn.disabled = false;
-      btn.style.background = '#ff3333';
+      btn.classList.add('btn-danger');
       btn.addEventListener('click', (e) => {
         const id = Number(e.currentTarget.dataset.id);
         removeFromWatchlist(id);
